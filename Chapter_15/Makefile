@@ -8,8 +8,8 @@ link_example: link_example.s
 	ls -l link_example
 	ldd link_example
 
-libmymath.so: squareme.s
-	gcc -shared squareme.s -o libmymath.so
+libmymath.so: squareme.s printstuff.s multbyten.s
+	gcc -shared printstuff.s multbyten.s squareme.s -o libmymath.so
 
 run_squareme: libmymath.so run_squareme.s
 	gcc run_squareme.s -lmymath -no-pie -fno-pie -L . -o run_squareme
