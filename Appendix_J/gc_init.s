@@ -13,6 +13,6 @@ gc_init:
     syscall
     
     movq    %rax, heap_start
-    movq    %rax, head_end
+    movq    %rax, heap_end
     
     ret

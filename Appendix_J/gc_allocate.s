@@ -62,7 +62,7 @@ gc_allocate_internal:
     
     # Put heap start/end in %rsi/%rcx
     movq    heap_start, %rsi
-    movq    head_end, %rcx
+    movq    heap_end, %rcx
 
 allocate_loop:
     # If we have reached the end of memory
