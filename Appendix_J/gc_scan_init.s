@@ -18,7 +18,7 @@ gc_scan_init:
     subq    %rsp, %rdi
     # - Data section size
     movq    $.rodata, %rdx
-    andq    $0xfffffffffffffff8, %rdi   # Align to 8-byte boundary
+    andq    $0xfffffffffffffff8, %rdx   # Align to 8-byte boundary
     movq    $_end, %rcx
     subq    %rdx, %rcx
     addq    %rcx, %rdi
