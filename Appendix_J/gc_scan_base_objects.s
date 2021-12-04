@@ -16,7 +16,7 @@ gc_scan_base_objects:
     call    gc_scan_memory
     
     # .rodata is the first data segment
-    movq    $.rodata, %rdi
+    movq    $__bss_start, %rdi
     andq    $0xfffffffffffffff8, %rdi   # Align to 8-byte boundary
     # _end marks the end of data
     movq    $_end, %rsi
